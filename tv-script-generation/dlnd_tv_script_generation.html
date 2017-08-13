@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[473]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[474]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -11901,7 +11901,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[475]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -11972,7 +11972,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[476]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">token_lookup</span><span class="p">():</span>
@@ -12033,7 +12033,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[477]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12059,7 +12059,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[478]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12096,7 +12096,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[479]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12169,17 +12169,29 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[480]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_inputs</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def get_inputs(batch_size=None, num_steps=None):</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     Create TF Placeholders for input, targets, and learning rate.</span>
+<span class="c1">#     :return: Tuple (input, targets, learning rate)</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+
+<span class="c1">#     inputs = tf.placeholder(tf.int32, [batch_size, num_steps], name=&#39;input&#39;)</span>
+<span class="c1">#     targets = tf.placeholder(tf.int32, [batch_size, num_steps], name=&#39;target&#39;)</span>
+<span class="c1">#     learning_rate = tf.placeholder(tf.float32)</span>
+    
+<span class="c1">#     return inputs, targets, learning_rate</span>
+
+<span class="k">def</span> <span class="nf">get_inputs</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create TF Placeholders for input, targets, and learning rate.</span>
 <span class="sd">    :return: Tuple (input, targets, learning rate)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
-    <span class="n">targets</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
     <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">learning_rate</span>
@@ -12231,29 +12243,45 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="prompt input_prompt">In&nbsp;[481]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">num_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">keep_prob</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def get_init_cell(batch_size, rnn_size, num_layers=2, keep_prob=1.):</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     Create an RNN Cell and initialize it.</span>
+<span class="c1">#     :param batch_size: Size of batches</span>
+<span class="c1">#     :param rnn_size: Size of RNNs</span>
+<span class="c1">#     :return: Tuple (cell, initialize state)</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     def lstm_cell():</span>
+<span class="c1">#         return tf.contrib.rnn.DropoutWrapper(</span>
+<span class="c1">#                                 tf.contrib.rnn.BasicLSTMCell(rnn_size),</span>
+<span class="c1">#                             output_keep_prob=keep_prob)</span>
+<span class="c1">#     # Stack up multiple LSTM layers (num_layers), for deep learning</span>
+<span class="c1">#     cell = tf.contrib.rnn.MultiRNNCell( [lstm_cell() for _ in range(num_layers)])</span>
+<span class="c1">#     initial_state = tf.identity(cell.zero_state(tf.reshape(batch_size, [1]), tf.float32),</span>
+<span class="c1">#                                 name=&#39;initial_state&#39;)</span>
+    
+<span class="c1">#     return (cell, initial_state)</span>
+
+
+<span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create an RNN Cell and initialize it.</span>
 <span class="sd">    :param batch_size: Size of batches</span>
 <span class="sd">    :param rnn_size: Size of RNNs</span>
 <span class="sd">    :return: Tuple (cell, initialize state)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">lstm_cell</span><span class="p">():</span>
-        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span>
-                                <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">),</span>
-                            <span class="n">output_keep_prob</span><span class="o">=</span><span class="n">keep_prob</span><span class="p">)</span>
+<span class="c1">#     def lstm_cell(keep_prob=1.):</span>
+<span class="c1">#         return tf.contrib.rnn.DropoutWrapper(</span>
+<span class="c1">#                                 tf.contrib.rnn.BasicLSTMCell(rnn_size),</span>
+<span class="c1">#                                 output_keep_prob=keep_prob</span>
+<span class="c1">#         )</span>
       
-    <span class="c1"># wrap BasicLSTMCell with a Dropout</span>
-    <span class="n">drop</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span>
-                                <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">),</span>
-                            <span class="n">output_keep_prob</span><span class="o">=</span><span class="n">keep_prob</span><span class="p">)</span>
     <span class="c1"># Stack up multiple LSTM layers (num_layers), for deep learning</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">(</span> <span class="p">[</span><span class="n">lstm_cell</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)])</span>
-    <span class="n">initial_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">zero_state</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
-                                <span class="n">name</span><span class="o">=</span><span class="s1">&#39;initial_state&#39;</span><span class="p">)</span>
+    <span class="n">num_layers</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">(</span> <span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)])</span>
+    <span class="n">initial_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">zero_state</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;initial_state&#39;</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">)</span>
 
@@ -12297,7 +12325,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[482]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
@@ -12345,20 +12373,6 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[206]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tf.all_variables()</span>
-<span class="c1"># tf.global_variables()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12377,7 +12391,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[207]:</div>
+<div class="prompt input_prompt">In&nbsp;[484]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
@@ -12438,7 +12452,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[370]:</div>
+<div class="prompt input_prompt">In&nbsp;[503]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.contrib.layers</span> <span class="k">import</span> <span class="n">fully_connected</span>
@@ -12459,6 +12473,9 @@ Tests Passed
     
     <span class="n">outputs</span><span class="p">,</span> <span class="n">final_state</span> <span class="o">=</span> <span class="n">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">embedded_inputs</span><span class="p">)</span>
     
+<span class="c1">#    # Different ways of applying a fully connected layer with a linear activation and vocab_size as the number of outputs.</span>
+
+
 <span class="c1">#     linear_layer_w = tf.Variable(tf.truncated_normal((rnn_size, vocab_size), stddev=1/np.sqrt(rnn_size)))</span>
 <span class="c1">#     linear_layer_b = tf.Variable(tf.zeros(vocab_size))</span>
         
@@ -12469,20 +12486,47 @@ Tests Passed
 <span class="c1">#     logits = tf.convert_to_tensor(tf.reshape(tf.matmul(tf.reshape(tf.concat(outputs, axis=1), (-1, rnn_size)), linear_layer_w) + linear_layer_b,</span>
 <span class="c1">#                                              tf.concat([input_data.shape, tf.convert_to_tensor([vocab_size])], axis=0)))</span>
   
-
-<span class="c1">#         logits = tf.convert_to_tensor(tf.reshape(tf.matmul(tf.reshape(tf.concat(outputs, axis=1), (-1, rnn_size)), linear_layer_w) + linear_layer_b,</span>
+<span class="c1">#    logits = tf.convert_to_tensor(tf.reshape(tf.matmul(tf.reshape(tf.concat(outputs, axis=1), (-1, rnn_size)), linear_layer_w) + linear_layer_b,</span>
 <span class="c1">#                                             tf.TensorShape([input_data.shape[0],input_data.shape[1], vocab_size])))</span>
 
+
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;input_data.shape:&quot;</span><span class="p">,</span> <span class="n">input_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">input_shape</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;tf.shape(input_data):&quot;</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">)</span>
+    <span class="c1"># Still looking for the best way we can reshape without issues !!</span>
     <span class="n">stk_rnn_outputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">))</span>
     <span class="n">logits</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">fully_connected</span><span class="p">(</span><span class="n">stk_rnn_outputs</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">activation_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="p">,</span>
-                        <span class="p">(</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">vocab_size</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+                        <span class="c1"># (input_shape[0], input_shape[1], vocab_size) # this will break the test here (see the commented error below)</span>
+                                                                      <span class="c1"># but works later while building the graph</span>
+                                                                      <span class="c1"># (so I run it to continue graph building and learning)</span>
+                         <span class="p">(</span><span class="n">input_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">input_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">)</span> <span class="c1"># while this will make the test pass here but</span>
+                                                                                        <span class="c1"># but it is breaking the graph building later</span>
+                                                                                        <span class="c1"># please see Build the Graph section</span>
+                       <span class="p">)</span>
+    
+    <span class="c1"># I re-ran it with the version that does not break the test !!!</span>
+    
+    <span class="c1"># my question is how to get the right reshaping way of the fully conntected output, that supports both this </span>
+    <span class="c1"># test and the graph building (any suggestion for the logits implementation) ?</span>
+    
+    <span class="c1"># when I use input_shape (input_data.shape[0].value, input_data.shape[1].value, vocab_size) while reshaping </span>
+    <span class="c1"># I get :</span>
+    
+<span class="c1"># ---&gt; 61 tests.test_build_nn(build_nn)</span>
+
+<span class="c1"># /workspace/deep-learning/tv-script-generation/problem_unittests.py in test_build_nn(build_nn)</span>
+<span class="c1">#     263         # Check Shape</span>
+<span class="c1">#     264         assert logits.get_shape().as_list() == test_input_data_shape + [test_vocab_size], \</span>
+<span class="c1"># --&gt; 265             &#39;Outputs has wrong shape.  Found shape {}&#39;.format(logits.get_shape())</span>
+<span class="c1">#     266         assert final_state.get_shape().as_list() == [test_rnn_layer_size, 2, None, test_rnn_size], \</span>
+<span class="c1">#     267             &#39;Final state wrong shape.  Found shape {}&#39;.format(final_state.get_shape())</span>
+
+<span class="c1"># AssertionError: Outputs has wrong shape.  Found shape (?, ?, 27)</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;logits:&quot;</span><span class="p">,</span> <span class="n">logits</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">logits</span><span class="p">,</span> <span class="n">final_state</span> 
 
-<span class="c1"># To clarify why is either breaking this test or I have to specify the (batch, seq_length)</span>
-<span class="c1"># while building the graph ... how to get the shape of the input or the batch size (the right way)</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -12506,33 +12550,11 @@ Tests Passed
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Vocab_size: 27, embed_dim: 300
-Tensor(&#34;Reshape_1:0&#34;, shape=(?, ?, 27), dtype=float32)
+input_data.shape: (128, 5)
+tf.shape(input_data): Tensor(&#34;Shape:0&#34;, shape=(2,), dtype=int32)
+logits: Tensor(&#34;Reshape_1:0&#34;, shape=(128, 5, 27), dtype=float32)
+Tests Passed
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-370-0c69b4e15273&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     46</span> DON<span class="ansi-red-fg">&#39;</span>T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
-<span class="ansi-green-intense-fg ansi-bold">     47</span> &#34;&#34;&#34;
-<span class="ansi-green-fg">---&gt; 48</span><span class="ansi-red-fg"> </span>tests<span class="ansi-blue-fg">.</span>test_build_nn<span class="ansi-blue-fg">(</span>build_nn<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/workspace/deep-learning/tv-script-generation/problem_unittests.py</span> in <span class="ansi-cyan-fg">test_build_nn</span><span class="ansi-blue-fg">(build_nn)</span>
-<span class="ansi-green-intense-fg ansi-bold">    263</span>         <span class="ansi-red-fg"># Check Shape</span>
-<span class="ansi-green-intense-fg ansi-bold">    264</span>         <span class="ansi-green-fg">assert</span> logits<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> test_input_data_shape <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">[</span>test_vocab_size<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-fg">--&gt; 265</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#39;Outputs has wrong shape.  Found shape {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>logits<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    266</span>         <span class="ansi-green-fg">assert</span> final_state<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>as_list<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">[</span>test_rnn_layer_size<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> test_rnn_size<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-red-fg"> </span><span class="ansi-red-fg">\</span>
-<span class="ansi-green-intense-fg ansi-bold">    267</span>             <span class="ansi-blue-fg">&#39;Final state wrong shape.  Found shape {}&#39;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>final_state<span class="ansi-blue-fg">.</span>get_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AssertionError</span>: Outputs has wrong shape.  Found shape (?, ?, 27)</pre>
 </div>
 </div>
 
@@ -12584,7 +12606,7 @@ Tensor(&#34;Reshape_1:0&#34;, shape=(?, ?, 27), dtype=float32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[371]:</div>
+<div class="prompt input_prompt">In&nbsp;[491]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
@@ -12679,15 +12701,15 @@ Tensor(&#34;Reshape_1:0&#34;, shape=(?, ?, 27), dtype=float32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[372]:</div>
+<div class="prompt input_prompt">In&nbsp;[492]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># Embedding Dimension Size</span>
 <span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="c1"># Sequence Length</span>
@@ -12719,7 +12741,7 @@ Tensor(&#34;Reshape_1:0&#34;, shape=(?, ?, 27), dtype=float32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[373]:</div>
+<div class="prompt input_prompt">In&nbsp;[493]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12770,7 +12792,9 @@ Tensor(&#34;Reshape_1:0&#34;, shape=(?, ?, 27), dtype=float32)
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tensor(&#34;Shape:0&#34;, shape=(2,), dtype=int32)
 Vocab_size: 6779, embed_dim: 200
-Tensor(&#34;Reshape_2:0&#34;, shape=(?, ?, 6779), dtype=float32)
+input_data.shape: (?, ?)
+tf.shape(input_data): Tensor(&#34;Shape_1:0&#34;, shape=(2,), dtype=int32)
+logits: Tensor(&#34;Reshape_2:0&#34;, shape=(?, ?, 6779), dtype=float32)
 </pre>
 </div>
 </div>
@@ -12790,7 +12814,7 @@ Tensor(&#34;Reshape_2:0&#34;, shape=(?, ?, 6779), dtype=float32)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[374]:</div>
+<div class="prompt input_prompt">In&nbsp;[494]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12840,13 +12864,27 @@ Tensor(&#34;Reshape_2:0&#34;, shape=(?, ?, 6779), dtype=float32)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/34   train_loss = 8.822
-Epoch   1 Batch   16/34   train_loss = 6.329
-Epoch   2 Batch   32/34   train_loss = 6.034
-Epoch   4 Batch   14/34   train_loss = 6.065
-Epoch   5 Batch   30/34   train_loss = 5.942
-Epoch   7 Batch   12/34   train_loss = 5.938
-Epoch   8 Batch   28/34   train_loss = 5.966
+<pre>Epoch   0 Batch    0/34   train_loss = 8.823
+Epoch   1 Batch   16/34   train_loss = 6.266
+Epoch   2 Batch   32/34   train_loss = 6.055
+Epoch   4 Batch   14/34   train_loss = 6.098
+Epoch   5 Batch   30/34   train_loss = 5.958
+Epoch   7 Batch   12/34   train_loss = 5.952
+Epoch   8 Batch   28/34   train_loss = 5.985
+Epoch  10 Batch   10/34   train_loss = 5.938
+Epoch  11 Batch   26/34   train_loss = 5.928
+Epoch  13 Batch    8/34   train_loss = 5.799
+Epoch  14 Batch   24/34   train_loss = 5.814
+Epoch  16 Batch    6/34   train_loss = 5.843
+Epoch  17 Batch   22/34   train_loss = 5.921
+Epoch  19 Batch    4/34   train_loss = 5.806
+Epoch  20 Batch   20/34   train_loss = 5.850
+Epoch  22 Batch    2/34   train_loss = 5.877
+Epoch  23 Batch   18/34   train_loss = 5.812
+Epoch  25 Batch    0/34   train_loss = 5.809
+Epoch  26 Batch   16/34   train_loss = 5.962
+Epoch  27 Batch   32/34   train_loss = 5.764
+Epoch  29 Batch   14/34   train_loss = 5.712
 Model Trained and Saved
 </pre>
 </div>
@@ -12867,7 +12905,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[327]:</div>
+<div class="prompt input_prompt">In&nbsp;[495]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12892,7 +12930,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[365]:</div>
+<div class="prompt input_prompt">In&nbsp;[496]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12930,7 +12968,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[366]:</div>
+<div class="prompt input_prompt">In&nbsp;[497]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -12984,7 +13022,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[367]:</div>
+<div class="prompt input_prompt">In&nbsp;[498]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -12994,8 +13032,8 @@ Model Trained and Saved
 <span class="sd">    :param int_to_vocab: Dictionary of word ids as the keys and words as the values</span>
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)])</span>
-    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]</span>
+    <span class="c1"># print (probabilities, int_to_vocab[np.argmax(probabilities)])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">int_to_vocab</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -13018,8 +13056,7 @@ Model Trained and Saved
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[ 0.1   0.8   0.05  0.05] is
-Tests Passed
+<pre>Tests Passed
 </pre>
 </div>
 </div>
@@ -13039,7 +13076,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[369]:</div>
+<div class="prompt input_prompt">In&nbsp;[501]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13057,8 +13094,6 @@ Tests Passed
 
     <span class="c1"># Get Tensors from loaded model</span>
     <span class="n">input_text</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">,</span> <span class="n">final_state</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">)</span>
-    
-    <span class="c1"># input_text = get_inputs(batch_size=1, num_steps=1)[0] # to remove</span>
     <span class="c1"># Sentences generation setup</span>
     <span class="n">gen_sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">prime_word</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">]</span>
     <span class="n">prev_state</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">initial_state</span><span class="p">,</span> <span class="p">{</span><span class="n">input_text</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])})</span>
@@ -13067,15 +13102,18 @@ Tests Passed
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">gen_length</span><span class="p">):</span>
         <span class="c1"># Dynamic Input</span>
         <span class="n">dyn_input</span> <span class="o">=</span> <span class="p">[[</span><span class="n">vocab_to_int</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">gen_sentences</span><span class="p">[</span><span class="o">-</span><span class="n">seq_length</span><span class="p">:]]]</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="n">dyn_input</span><span class="p">)</span>
+        <span class="c1"># print (dyn_input)</span>
         <span class="n">dyn_seq_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dyn_input</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
         <span class="c1"># Get Prediction</span>
         <span class="n">probabilities</span><span class="p">,</span> <span class="n">prev_state</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
             <span class="p">[</span><span class="n">probs</span><span class="p">,</span> <span class="n">final_state</span><span class="p">],</span>
             <span class="p">{</span><span class="n">input_text</span><span class="p">:</span> <span class="n">dyn_input</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">:</span> <span class="n">prev_state</span><span class="p">})</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">probabilities</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-        <span class="n">pred_word</span> <span class="o">=</span> <span class="n">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">[</span><span class="n">dyn_seq_length</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">int_to_vocab</span><span class="p">)</span>
+        
+        <span class="c1"># print(probabilities.shape)</span>
+        <span class="n">pred_word</span> <span class="o">=</span> <span class="n">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">dyn_seq_length</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">int_to_vocab</span><span class="p">)</span> <span class="c1"># I modified this because of the shape of prob</span>
+                                                                                <span class="c1"># (1, dyn_seq_length, vocab) probably related to</span>
+                                                                                <span class="c1"># the graph building !</span>
 
         <span class="n">gen_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pred_word</span><span class="p">)</span>
     
@@ -13105,33 +13143,25 @@ Tests Passed
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-[[3823]]
-(1, 1, 6779)
-[[  4.16383446e-05   9.18351579e-05   4.28759377e-05 ...,   1.04902005e-02
-    1.90148101e-04   1.23494945e-04]] ||period||
-[[3823, 6772]]
-(1, 2, 6779)
+moe_szyslak:
+homer_simpson: i&#39;m an grampa
+
+moe_szyslak: is krusty_the_clown:
+
+
+, kent_brockman:?.(are out coin, oh to wait. loved?
+. yeah? arse rhyme nothin&#39; first where,) homer_simpson:(me i a you) be my with? gus that&#39;ll what you didn&#39;t distraught well really carl all, moe_szyslak:) but spend a civil wanna my a notices,. you michelin. but here&#39;s,(wiener i&#39;d people) the fine-lookin&#39;., moe_szyslak: carl_carlson: it listenin&#39; ya(desperate loves?
+homer_simpson: i / moe_szyslak: chief or superior(yeah?.
+.
+, there fellas) career donut-shaped hoo the well, moe_szyslak:.
+homer_simpson: manjula befouled money me anonymous am. hey good, must whatchamacallit) al_gore: or!) cobra just comes i open. moe_szyslak:. are, on homer,
+have an moe_szyslak:. gonna lou my hawaii could!
+system belch homer homer down, religion you&#39;re?
+dying, that item mr,! moe_szyslak: marge and moe_szyslak:(able he most, eat
+
+
+no,
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-369-0c4f67e09e94&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span>             {input_text: dyn_input, initial_state: prev_state})
-<span class="ansi-green-intense-fg ansi-bold">     33</span>         print<span class="ansi-blue-fg">(</span>probabilities<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 34</span><span class="ansi-red-fg">         </span>pred_word <span class="ansi-blue-fg">=</span> pick_word<span class="ansi-blue-fg">(</span>probabilities<span class="ansi-blue-fg">[</span>dyn_seq_length<span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> int_to_vocab<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     35</span> 
-<span class="ansi-green-intense-fg ansi-bold">     36</span>         gen_sentences<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>pred_word<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">IndexError</span>: index 1 is out of bounds for axis 0 with size 1</pre>
 </div>
 </div>
 
@@ -13148,6 +13178,19 @@ Tests Passed
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
